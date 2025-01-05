@@ -11,6 +11,9 @@ body {
   width: 100%;
   height: 80px;
   z-index: 1000;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
 }
 .navbar ul {
   display: flex;
@@ -19,7 +22,6 @@ body {
   margin-right: 30px;
 }
 .navbar .logo {
-  flex: 1 1 auto;
   margin-left: 30px;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -29,12 +31,11 @@ body {
 .navbar a {
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 14px;
   color: white;
   margin: 0 10px;
   transition: color 0.5s;
-}
-.navbar li a[href="#home"] {
-  color: #ffd700;
 }
 .navbar a:hover:not(.logo) {
   color: #ffd700;
