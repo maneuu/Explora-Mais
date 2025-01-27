@@ -1,122 +1,122 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  font-family: "Poppins", serif;
   box-sizing: border-box;
 }
 
-/* Estilos gerais */
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 200vh; /* Apenas para demonstração */
+  font-family: "Poppins", serif;
+  min-height: 200vh;
 }
 
-/* Header Principal */
-.main-header {
-  position: relative;
+.header {
   width: 100%;
-  height: 100vh;
-  background-image: url(../img/01.jpg);
-  background-size: cover;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(9, 0, 77, 0.65), rgba(9, 0, 77, 0.65)),
+    url(../img/plane-wing-02.jpg);
   background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px 8%;
 }
 
-.header-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.navigation {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.header-content {
-  position: relative;
-  z-index: 2;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  color: white;
-  padding: 0 50px;
-  height: 100%;
-}
-
-.header-title {
-  font-size: 60px;
-  letter-spacing: 10px;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-}
-
-.header-slogan {
-  max-width: 600px;
-}
-
-.header-slogan h2 {
-  font-size: 24px;
-  position: relative;
-}
-
-.header-slogan h2::after {
-  content: "";
-  display: block;
-  width: 55%;
-  height: 3px;
-  background: linear-gradient(to right, #8a2be2, #ff6347);
-  margin-top: 10px;
-  border-radius: 2px;
-}
-
-.header-slogan p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-top: 15px;
-  color: white;
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  z-index: 1000;
+  justify-content: space-between;
+  padding: 10px 0;
 }
 
-.navbar-logo {
-  font-size: 35px;
-  font-weight: bold;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  text-decoration: none;
-}
-
-.navbar-links {
+.site-logo {
+  width: 180px;
+  cursor: pointer;
+  letter-spacing: 5px;
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  gap: 10px;
+  font-size: 40px;
+  color: white;
+}
+.site-logo img {
+  height: 30px;
 }
 
-.navbar-links a {
+.nav-links {
+  list-style: none;
+  width: 100%;
+  text-align: right;
+  padding-right: 60px;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.nav-links li a {
   color: white;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 14px;
-  margin: 0 15px;
-  transition: color 0.3s ease;
 }
 
-.navbar-links a:hover {
-  color: #ffd700;
+.booking-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background: #f5168d;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.booking-btn img {
+  width: 20px;
+  margin-right: 12px;
+}
+
+.hero-content {
+  margin-top: 10%;
+  color: white;
+  max-width: 620px;
+}
+
+.hero-content h1 {
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 85px;
+  margin-bottom: 25px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero-content form {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.hero-content form input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.search-btn {
+  font-size: 15px;
+  padding: 15px 30px;
+  background-color: #f5168d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
