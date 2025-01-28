@@ -9,8 +9,9 @@ body {
   font-family: "Poppins", serif;
   min-height: 200vh;
 }
+
 /* HEADER */
-.header {
+.hero {
   width: 100%;
   min-height: 100vh;
   background-image: linear-gradient(rgba(9, 0, 77, 0.65), rgba(9, 0, 77, 0.65)),
@@ -20,7 +21,7 @@ body {
   padding: 10px 8%;
 }
 
-.navigation {
+.navbar {
   width: 100%;
   display: flex;
   align-items: center;
@@ -28,7 +29,7 @@ body {
   padding: 10px 0;
 }
 
-.site-logo {
+.logo {
   width: 180px;
   cursor: pointer;
   letter-spacing: 5px;
@@ -38,28 +39,29 @@ body {
   font-size: 40px;
   color: white;
 }
-.site-logo img {
+
+.logo img {
   height: 30px;
 }
 
-.nav-links {
+.nav-list {
   list-style: none;
-  width: 100%;
   text-align: right;
+  width: 100%;
   padding-right: 60px;
 }
 
-.nav-links li {
+.nav-list li {
   display: inline-block;
   margin: 10px 20px;
 }
 
-.nav-links li a {
+.nav-list li a {
   color: white;
   text-decoration: none;
 }
 
-.booking-btn {
+.btn {
   display: flex;
   align-items: center;
   padding: 10px 20px;
@@ -72,7 +74,7 @@ body {
   cursor: pointer;
 }
 
-.booking-btn img {
+.btn img {
   width: 20px;
   margin-right: 12px;
 }
@@ -103,7 +105,7 @@ body {
   padding: 10px;
 }
 
-.hero-content form input {
+.hero-content form .input {
   border: 0;
   outline: 0;
   width: 100%;
@@ -111,7 +113,7 @@ body {
   padding-left: 10px;
 }
 
-.search-btn {
+.hero-content form .btn {
   font-size: 15px;
   padding: 15px 30px;
   background-color: #f5168d;
@@ -121,25 +123,23 @@ body {
   border-radius: 5px;
 }
 
-/* SOBRE NOS SECTION */
-.about-us {
+/* SERVICES SECTION */
+.services {
   min-height: 100vh;
   width: 100%;
-  background-color: #f9f9f9; /* Fundo claro */
+  background-color: #f9f9f9;
 }
 
-.service-wrapper {
+.container {
   padding: 5% 8%;
 }
 
-.service {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.section-header {
+  text-align: center;
 }
 
-.service h1 {
-  color: #333; /* Texto escuro para contraste */
+.section-header h1 {
+  color: #333;
   font-size: 4rem;
   letter-spacing: 4px;
 }
