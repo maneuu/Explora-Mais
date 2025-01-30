@@ -57,10 +57,29 @@ body {
 }
 
 .nav-list li a {
-  color: white;
+  color: #b1b1b1;
   text-decoration: none;
+  padding: 0 10px;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: 0.3s color ease-in-out;
 }
-
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  background-color: #f5168d;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.4s ease-in-out;
+}
+.nav-list li a:hover {
+  color: #fff;
+}
+.nav-list li a:hover::after {
+  width: 100%;
+}
 .btn {
   display: flex;
   align-items: center;
