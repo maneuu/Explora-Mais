@@ -2,12 +2,9 @@
   VARIÁVEIS GLOBAIS
 ===========================================*/
 :root {
-  --bg-color: #fff;
-  ---text-color: #221314;
-  --second-color: #5a7184;
-  --main-color: #6e54fa;
-  --big-font: 6rem;
-  --h2-font: 3rem;
+  ---text-color: #333;
+  --main-color: #f5168d;
+  --h2-font: 4rem;
   --p-font: 1.1rem;
 }
 
@@ -30,7 +27,7 @@ body {
 .hero {
   width: 100%;
   height: 100vh;
-  background-image: url(../img/plane-wing-02.jpg);
+  background-image: url(../img/hero01.jpg);
   animation: bgChange 20s linear infinite;
   background-position: center;
   background-size: cover;
@@ -159,7 +156,7 @@ body {
 }
 
 .hero-content p {
-  font-size: 1.125rem;
+  font-size: var(--p-font);
   margin-bottom: 1.7rem;
 }
 
@@ -192,19 +189,17 @@ body {
 .navbar .fa-bars {
   display: none;
 }
-
 /*===========================================
   ESTILOS GERAIS DE SEÇÕES
 ===========================================*/
 section {
   padding: 10px 8%;
 }
-
 /*===========================================
   SEÇÃO SERVICES
 ===========================================*/
 .services {
-  margin-top: 70px;
+  margin-top: 5rem;
   width: 100%;
 }
 
@@ -217,17 +212,17 @@ section {
   text-align: center;
 }
 
-.section-header h1 {
-  color: #333;
-  font-size: 4rem;
-  letter-spacing: 4px;
+.section-header h2 {
+  color: var(---text-color);
+  font-size: var(--h2-font);
+  letter-spacing: 1.7px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
-  gap: 15px;
-  margin-top: 80px;
+  gap: 1rem;
+  margin-top: 5rem;
 }
 
 .card {
@@ -245,7 +240,7 @@ section {
 }
 
 .card i {
-  color: #f5168d;
+  color: var(--main-color);
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 4.8rem;
@@ -257,7 +252,7 @@ section {
 }
 
 .card h2 {
-  color: #333;
+  color: var(---text-color);
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -269,16 +264,17 @@ section {
 }
 
 /*===========================================
-  SEÇÃO PACKAGE
+  SEÇÃO PACOTES
 ===========================================*/
-.title {
+.title h2 {
   text-align: center;
   font-size: var(--h2-font);
-  line-height: 1.2;
+  letter-spacing: 1.8px;
+  color: var(---text-color);
 }
 
 .package {
-  margin-top: 80px;
+  margin: 5rem 0;
 }
 
 .package-content {
@@ -301,12 +297,12 @@ section {
   height: auto;
 }
 
-.thum h3 {
+.thum .preco {
   position: absolute;
-  font-size: 1.875rem;
+  font-size: 1.9rem;
   font-weight: 600;
   text-align: right;
-  color: var(--bg-color);
+  color: #fff;
   top: 0.375rem;
   right: 2.5rem;
 }
@@ -335,22 +331,32 @@ section {
 /*===========================================
   SEÇÃO PLACES
 ===========================================*/
+.bg1 {
+  background: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 2rem 0 6rem;
+}
 .places {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
   gap: 15px;
   margin-top: 80px;
 }
 
-.places h1 {
+.places h2 {
   text-align: center;
+  margin: 0;
   margin-bottom: 2rem;
-  font-size: 3.5rem;
-  color: #333;
+  font-size: var(--h2-font);
+  color: #fff;
   grid-column: 1/-1;
+  letter-spacing: 1.6px;
 }
 
 .places img {
@@ -400,7 +406,7 @@ section {
   SEÇÃO NEWSLATER
 ============================================ */
 .newsletter {
-  color: #333;
+  color: var(---text-color);
   padding: 2.5rem 1.25rem;
   text-align: center;
 }
@@ -412,12 +418,12 @@ section {
   margin: 0 auto;
 }
 .newsletter h2 {
-  font-size: 3.5rem;
+  font-size: var(--h2-font);
   margin-bottom: 1.25rem;
   letter-spacing: 2px;
 }
 .newsletter p {
-  font-size: 1.25rem;
+  font-size: var(--p-font);
   margin-bottom: 1.25rem;
 }
 .newsletter form {
@@ -425,9 +431,9 @@ section {
   gap: 1rem;
 }
 .newsletter input {
-  width: 90%;
+  width: 100%;
   padding: 1rem;
-  border: 1px solid #333;
+  border: 2px solid var(---text-color);
   border-radius: 5px;
   outline: 0;
   font-size: 1.1rem;
@@ -435,35 +441,39 @@ section {
 .newsletter textarea {
   font-size: 1.1rem;
   padding: 1rem;
-  width: 90%;
+  width: 100%;
   font-family: "Poppins", sans-serif;
 }
 .newsletter .btn {
   justify-self: left;
-  padding: 0.625rem 1.25rem;
-  transition: all 0.4s ease;
+  padding: 1rem 3rem;
+  transition: all 0.4s ease-in-out;
   font-size: 1.23rem;
 }
 .newsletter .btn:hover {
   background-color: white;
-  color: #f5168d;
-  outline: 2px solid #f5168d;
+  color: var(--main-color);
+  outline: 2px solid var(--main-color);
 }
-.input-container {
-  position: relative;
-  margin-top: 20px;
-}
-.icons {
+
+.contatos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-content: space-around;
   margin: 4rem 0;
 }
-.icons i {
+.contatos i {
   font-size: 2rem;
   color: #333;
   margin: 0.625rem;
   cursor: pointer;
+}
+.contatos a {
+  text-decoration: none;
+  color: #333;
+}
+.contatos p {
+  font-size: 16px;
 }
 .newsletter iframe {
   width: 90%;
@@ -563,16 +573,16 @@ footer {
 -------------------------------------------*/
 @keyframes bgChange {
   0% {
-    background-image: url(../img/plane-wing-02.jpg);
+    background-image: url(../img/hero01.jpg);
   }
   30% {
-    background-image: url(../img/plane-wing-02.jpg);
+    background-image: url(../img/hero01.jpg);
   }
   35% {
-    background-image: url(../img/hero01.jpg);
+    background-image: url(../img/hero02.jpg);
   }
   65% {
-    background-image: url(../img/hero01.jpg);
+    background-image: url(../img/hero02.jpg);
   }
   75% {
     background-image: url(../img/hero03.jpg);
