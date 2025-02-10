@@ -1,3 +1,19 @@
+/*===========================================
+  VARIÁVEIS GLOBAIS
+===========================================*/
+:root {
+  --bg-color: #fff;
+  ---text-color: #221314;
+  --second-color: #5a7184;
+  --main-color: #6e54fa;
+  --big-font: 6rem;
+  --h2-font: 3rem;
+  --p-font: 1.1rem;
+}
+
+/*===========================================
+  RESET & ESTILOS BASE
+===========================================*/
 * {
   padding: 0;
   margin: 0;
@@ -8,10 +24,12 @@ body {
   font-family: "Poppins", serif;
 }
 
-/* HEADER */
+/*===========================================
+  SEÇÃO HEADER / HERO
+===========================================*/
 .hero {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url(../img/plane-wing-02.jpg);
   animation: bgChange 20s linear infinite;
   background-position: center;
@@ -20,6 +38,7 @@ body {
   padding: 0.625rem 8%;
   position: relative;
 }
+
 .hero .overlay {
   position: absolute;
   top: 0;
@@ -28,36 +47,23 @@ body {
   width: 100%;
   background-image: linear-gradient(rgba(9, 0, 77, 0.65), rgba(9, 0, 77, 0.65));
 }
+.hero .container {
+  height: 100%;
+}
 .hero .navbar,
 .hero .hero-content {
   position: relative;
   z-index: 4;
 }
-@keyframes bgChange {
-  0% {
-    background-image: url(../img/plane-wing-02.jpg);
-  }
-  30% {
-    background-image: url(../img/plane-wing-02.jpg);
-  }
-  35% {
-    background-image: url(../img/hero01.jpg);
-  }
-  65% {
-    background-image: url(../img/hero01.jpg);
-  }
-  75% {
-    background-image: url(../img/hero03.jpg);
-  }
-  95% {
-    background-image: url(../img/hero03.jpg);
-  }
-}
+
+/*-------------------------------------------
+  Navbar & Logo
+-------------------------------------------*/
 .navbar {
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 0.625rem 0;
 }
 
@@ -96,6 +102,7 @@ body {
   position: relative;
   transition: 0.3s color ease-in-out;
 }
+
 .nav-list li a::after {
   content: "";
   position: absolute;
@@ -106,12 +113,18 @@ body {
   bottom: -0.625rem;
   transition: 0.4s ease-in-out;
 }
+
 .nav-list li a:hover {
   color: #fff;
 }
+
 .nav-list li a:hover::after {
   width: 100%;
 }
+
+/*-------------------------------------------
+  Botões e Conteúdo do Hero
+-------------------------------------------*/
 .btn {
   display: flex;
   align-items: center;
@@ -131,21 +144,23 @@ body {
 }
 
 .hero-content {
-  margin-top: 10%;
   color: white;
-  max-width: 38.75rem;
+  max-width: 43rem;
+  display: grid;
+  align-content: center;
+  height: 100%;
 }
 
 .hero-content h1 {
-  font-size: 4.375rem;
+  font-size: 5rem;
   font-weight: 600;
   line-height: 5.3125rem;
-  margin-bottom: 25px;
+  margin-bottom: 1.4rem;
 }
 
 .hero-content p {
   font-size: 1.125rem;
-  margin-bottom: 30px;
+  margin-bottom: 1.7rem;
 }
 
 .hero-content form {
@@ -173,31 +188,21 @@ body {
   cursor: pointer;
   border-radius: 5px;
 }
+
 .navbar .fa-bars {
   display: none;
 }
-@media (max-width: 768px) {
-  html {
-    font-size: 13px;
-  }
-  .nav-list,
-  nav .btn {
-    display: none;
-  }
-  .navbar .fa-bars {
-    display: block;
-    font-size: 30px;
-    text-decoration: none;
-    color: #bb0667;
-  }
-  .thum img {
-    height: 100px;
-  }
-}
+
+/*===========================================
+  ESTILOS GERAIS DE SEÇÕES
+===========================================*/
 section {
   padding: 10px 8%;
 }
-/* SERVICES SECTION */
+
+/*===========================================
+  SEÇÃO SERVICES
+===========================================*/
 .services {
   margin-top: 70px;
   width: 100%;
@@ -262,25 +267,20 @@ section {
   margin: 12px 0;
   color: #666;
 }
-/* PACKAGE */
-:root {
-  --bg-color: #fff;
-  ---text-color: #221314;
-  --second-color: #5a7184;
-  --main-color: #6e54fa;
-  --big-font: 6rem;
-  --h2-font: 3rem;
-  --p-font: 1.1rem;
-}
 
+/*===========================================
+  SEÇÃO PACKAGE
+===========================================*/
 .title {
   text-align: center;
   font-size: var(--h2-font);
   line-height: 1.2;
 }
+
 .package {
   margin-top: 80px;
 }
+
 .package-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));
@@ -332,7 +332,9 @@ section {
   transform: scale(1.04);
 }
 
-/* PLACES */
+/*===========================================
+  SEÇÃO PLACES
+===========================================*/
 .places {
   max-width: 75rem;
   margin: 0 auto;
@@ -364,14 +366,17 @@ section {
   transform: scale(1.03);
   cursor: pointer;
 }
+
 .secao-img {
   position: relative;
   overflow: hidden;
 }
+
 .secao-img img {
   display: block;
   width: 100;
 }
+
 .lugar {
   color: white;
   font-weight: bold;
@@ -386,17 +391,21 @@ section {
   bottom: -20%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .secao-img:hover .lugar {
   bottom: 0;
 }
-/* FOOTER */
 
+/*===========================================
+  SEÇÃO FOOTER
+===========================================*/
 footer {
   background-color: #333;
   color: #fff;
   padding: 2.5rem 1.25rem;
   margin-top: 10rem;
 }
+
 .footer-container {
   max-width: 75rem;
   margin: 0 auto;
@@ -404,43 +413,97 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .footer-section {
   flex: 1;
   min-width: 200px;
   margin: 10px;
 }
+
 .footer-section h3 {
   border-bottom: 2px solid #555;
   padding-bottom: 0.625rem;
   margin-bottom: 15px;
 }
+
 .footer-section ul {
   list-style: none;
   padding: 0;
 }
+
 .footer-section ul li {
   margin-bottom: 10px;
 }
+
 .footer-section ul li a {
   color: #fff;
   text-decoration: none;
 }
+
 .footer-section ul li a:hover {
   text-decoration: underline;
 }
+
 .social-icons a {
   color: #fff;
   margin-right: 15px;
   font-size: 1.25rem;
   text-decoration: none;
 }
+
 .social-icons a:hover {
   color: #ddd;
 }
+
 .footer-bottom {
   text-align: center;
   border-top: 1px solid #555;
   padding-top: 1.25rem;
   margin-top: 20px;
   font-size: 0.875rem;
+}
+
+/*===========================================
+  MEDIA QUERIES
+===========================================*/
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  .nav-list,
+  nav .btn {
+    display: none;
+  }
+  .navbar .fa-bars {
+    display: block;
+    font-size: 30px;
+    text-decoration: none;
+    color: #bb0667;
+  }
+  .hero-content h1 {
+    line-height: 1.2;
+  }
+}
+/*-------------------------------------------
+  Animação de fundo
+-------------------------------------------*/
+@keyframes bgChange {
+  0% {
+    background-image: url(../img/plane-wing-02.jpg);
+  }
+  30% {
+    background-image: url(../img/plane-wing-02.jpg);
+  }
+  35% {
+    background-image: url(../img/hero01.jpg);
+  }
+  65% {
+    background-image: url(../img/hero01.jpg);
+  }
+  75% {
+    background-image: url(../img/hero03.jpg);
+  }
+  95% {
+    background-image: url(../img/hero03.jpg);
+  }
 }
