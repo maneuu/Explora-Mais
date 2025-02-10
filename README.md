@@ -13,7 +13,7 @@ Este projeto foi desenvolvido como parte da disciplina **Linguagem de Marcação
 
 ## 🎨 Preview do Site
 
-![Preview do Site](caminho/para/sua/imagem.png)
+![Preview do Site](preview.png)
 
 <!-- Substitua "caminho/para/sua/imagem.png" pelo caminho ou URL da imagem de preview do site -->
 
