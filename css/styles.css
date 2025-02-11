@@ -216,6 +216,7 @@ section {
   color: var(---text-color);
   font-size: var(--h2-font);
   letter-spacing: 1.7px;
+  margin-bottom: 1.4rem;
 }
 
 .cards {
@@ -352,11 +353,17 @@ section {
 .places h2 {
   text-align: center;
   margin: 0;
-  margin-bottom: 2rem;
   font-size: var(--h2-font);
   color: #fff;
   grid-column: 1/-1;
   letter-spacing: 1.6px;
+}
+.places p {
+  grid-column: 1/-1;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 .places img {
