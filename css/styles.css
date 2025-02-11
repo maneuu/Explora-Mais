@@ -36,7 +36,7 @@ body {
   position: relative;
 }
 
-.hero .overlay {
+.hero__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -47,8 +47,8 @@ body {
 .hero .container {
   height: 100%;
 }
-.hero .navbar,
-.hero .hero-content {
+.hero__nav,
+.hero .hero__content {
   position: relative;
   z-index: 4;
 }
@@ -56,7 +56,7 @@ body {
 /*-------------------------------------------
   Navbar & Logo
 -------------------------------------------*/
-.navbar {
+.hero__nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -64,7 +64,7 @@ body {
   padding: 0.625rem 0;
 }
 
-.logo {
+.hero__logo {
   width: 11.25rem;
   cursor: pointer;
   letter-spacing: 5px;
@@ -75,23 +75,23 @@ body {
   color: white;
 }
 
-.logo img {
+.hero__logo img {
   height: 1.875rem;
 }
 
-.nav-list {
+.hero__nav-list {
   list-style: none;
   text-align: right;
   width: 100%;
   padding-right: 3.75rem;
 }
 
-.nav-list li {
+.hero__nav-list li {
   display: inline-block;
   margin: 10px 20px;
 }
 
-.nav-list li a {
+.hero__nav-list li a {
   color: #b1b1b1;
   text-decoration: none;
   padding: 0 0.625rem;
@@ -100,10 +100,10 @@ body {
   transition: 0.3s color ease-in-out;
 }
 
-.nav-list li a::after {
+.hero__nav-list li a::after {
   content: "";
   position: absolute;
-  background-color: #f5168d;
+  background-color: var(--main-color);
   height: 0.1875rem;
   width: 0;
   left: 0;
@@ -111,36 +111,24 @@ body {
   transition: 0.4s ease-in-out;
 }
 
-.nav-list li a:hover {
+.hero__nav-list li a:hover {
   color: #fff;
 }
 
-.nav-list li a:hover::after {
+.hero__nav-list li a:hover::after {
   width: 100%;
 }
 
 /*-------------------------------------------
   Botões e Conteúdo do Hero
 -------------------------------------------*/
-.btn {
-  display: flex;
-  align-items: center;
-  padding: 0.625rem 1.25rem;
-  border: 0;
-  outline: 0;
-  border-radius: 5px;
-  background: #f5168d;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-}
 
 .btn img {
   width: 1.25rem;
   margin-right: 12px;
 }
 
-.hero-content {
+.hero__content {
   color: white;
   max-width: 43rem;
   display: grid;
@@ -148,19 +136,19 @@ body {
   height: 100%;
 }
 
-.hero-content h1 {
+.hero__content h1 {
   font-size: 5rem;
   font-weight: 600;
   line-height: 5.3125rem;
   margin-bottom: 1.4rem;
 }
 
-.hero-content p {
+.hero__content p {
   font-size: var(--p-font);
   margin-bottom: 1.7rem;
 }
 
-.hero-content form {
+.hero__content form {
   display: flex;
   align-items: center;
   background: white;
@@ -168,7 +156,7 @@ body {
   padding: 0.625rem;
 }
 
-.hero-content form .input {
+.hero__content form .input {
   border: 0;
   outline: 0;
   width: 100%;
@@ -176,7 +164,7 @@ body {
   padding-left: 0.625rem;
 }
 
-.hero-content form .btn {
+.hero__content form .btn {
   font-size: 0.9375rem;
   padding: 0.9375rem 1.875rem;
   background-color: #f5168d;
@@ -186,14 +174,35 @@ body {
   border-radius: 5px;
 }
 
-.navbar .fa-bars {
+.hero__nav .hero__menu-toggle {
   display: none;
+  text-decoration: none;
+}
+.hero__nav .hero__menu-toggle i {
+  font-size: 3rem;
+  color: var(--main-color);
 }
 /*===========================================
-  ESTILOS GERAIS DE SEÇÕES
+  ESTILOS GERAIS
 ===========================================*/
 section {
   padding: 10px 8%;
+}
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 0.625rem 1.25rem;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background: var(--main-color);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
 }
 /*===========================================
   SEÇÃO SERVICES
@@ -203,30 +212,22 @@ section {
   width: 100%;
 }
 
-.container {
-  max-width: 75rem;
-  margin: 0 auto;
-}
-
-.section-header {
-  text-align: center;
-}
-
-.section-header h2 {
+.services__title {
   color: var(---text-color);
   font-size: var(--h2-font);
   letter-spacing: 1.7px;
   margin-bottom: 1.4rem;
+  text-align: center;
 }
 
-.cards {
+.services__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
   gap: 1rem;
   margin-top: 5rem;
 }
 
-.card {
+.services__card {
   padding: 2.5rem 1.25rem 4.375rem;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
@@ -235,12 +236,12 @@ section {
   transition: transform 0.3s, background-color 0.3s;
 }
 
-.card:hover {
+.services__card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card i {
+.services__card i {
   color: var(--main-color);
   margin-top: 30px;
   margin-bottom: 20px;
@@ -248,17 +249,17 @@ section {
   transition: color 0.3s;
 }
 
-.card:hover i {
+.services__card:hover i {
   color: #bb0667;
 }
 
-.card h2 {
+.services__card h2 {
   color: var(---text-color);
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-.card p {
+.services__card p {
   width: 100%;
   margin: 12px 0;
   color: #666;
@@ -267,18 +268,18 @@ section {
 /*===========================================
   SEÇÃO PACOTES
 ===========================================*/
-.title h2 {
+
+.packages {
+  margin: 5rem 0;
+}
+.packages h2 {
   text-align: center;
   font-size: var(--h2-font);
   letter-spacing: 1.8px;
   color: var(---text-color);
 }
 
-.package {
-  margin: 5rem 0;
-}
-
-.package-content {
+.packages__content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   gap: 2rem;
@@ -286,60 +287,52 @@ section {
   margin-top: 5rem;
 }
 
-.thum {
+.packages__thumbnail {
   position: relative;
   transition: transform 0.4s ease;
   cursor: pointer;
 }
 
-.thum img {
+.packages__thumbnail img {
   border-radius: 10px;
   width: 100%;
   height: auto;
 }
 
-.thum .preco {
+.packages__thumbnail .packages__price {
   position: absolute;
   font-size: 1.9rem;
   font-weight: 600;
   text-align: right;
   color: #fff;
-  top: 0.375rem;
+  top: 1rem;
   right: 2.5rem;
 }
 
-.dest-content {
+.packages__details {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
-.stars i {
+.packages__rating i {
   color: var(--main-color);
   font-size: 1.25rem;
 }
 
-.location h4 {
+.packages__location h4 {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.thum:hover {
+.packages__thumbnail:hover {
   transform: scale(1.04);
 }
 
 /*===========================================
   SEÇÃO PLACES
 ===========================================*/
-.bg1 {
-  background: url(../img/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 2rem 0 6rem;
-}
 .places {
   max-width: 75rem;
   margin: 0 auto;
@@ -348,6 +341,14 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
   gap: 15px;
   margin-top: 80px;
+}
+.places__bg {
+  background: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 2rem 0 6rem;
 }
 
 .places h2 {
@@ -380,17 +381,17 @@ section {
   cursor: pointer;
 }
 
-.secao-img {
+.places__item {
   position: relative;
   overflow: hidden;
 }
 
-.secao-img img {
+.places__item img {
   display: block;
   width: 100;
 }
 
-.lugar {
+.places__location {
   color: white;
   font-weight: bold;
   position: absolute;
@@ -405,85 +406,101 @@ section {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.secao-img:hover .lugar {
+.places__item:hover .places__location {
   bottom: 0;
 }
 
 /* =========================================
-  SEÇÃO NEWSLATER
+  SEÇÃO CONTATO
 ============================================ */
-.newsletter {
+.contact {
   color: var(---text-color);
   padding: 2.5rem 1.25rem;
   text-align: center;
 }
-.newsletter .grid {
+.contact__info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-content: space-around;
+  margin: 4rem 0;
+}
+.contact__info i {
+  font-size: 2rem;
+  color: var(---text-color);
+  margin: 0.625rem;
+  cursor: pointer;
+}
+.contact__info a {
+  text-decoration: none;
+  color: var(---text-color);
+}
+.contact__info p {
+  font-size: 16px;
+}
+
+.contact .contact__form-map {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
   max-width: 75rem;
   margin: 0 auto;
 }
-.newsletter h2 {
+.contact h2 {
   font-size: var(--h2-font);
   margin-bottom: 1.25rem;
   letter-spacing: 2px;
 }
-.newsletter p {
+.contact p {
   font-size: var(--p-font);
   margin-bottom: 1.25rem;
 }
-.newsletter form {
+.contact form {
   display: grid;
-  gap: 1rem;
-}
-.newsletter input {
-  width: 100%;
-  padding: 1rem;
-  border: 2px solid var(---text-color);
-  border-radius: 5px;
-  outline: 0;
-  font-size: 1.1rem;
-}
-.newsletter textarea {
-  font-size: 1.1rem;
-  padding: 1rem;
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-}
-.newsletter .btn {
-  justify-self: left;
-  padding: 1rem 3rem;
-  transition: all 0.4s ease-in-out;
-  font-size: 1.23rem;
-}
-.newsletter .btn:hover {
-  background-color: white;
-  color: var(--main-color);
-  outline: 2px solid var(--main-color);
+  gap: 1.5rem;
 }
 
-.contatos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  justify-content: space-around;
-  margin: 4rem 0;
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--text-color, #ccc);
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
-.contatos i {
-  font-size: 2rem;
-  color: #333;
-  margin: 0.625rem;
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: var(--main-color, #3498db);
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+  outline: none;
+}
+
+.contact .btn {
+  justify-self: start;
+  padding: 1rem 3rem;
+  font-size: 1.23rem;
+  background: var(--main-color, #3498db);
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.2s ease-in-out,
+    box-shadow 0.2s ease;
 }
-.contatos a {
-  text-decoration: none;
-  color: #333;
+
+.contact .btn:hover {
+  background-color: white;
+  color: var(--main-color, #3498db);
+  outline: 2px solid var(--main-color, #3498db);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
 }
-.contatos p {
-  font-size: 16px;
-}
-.newsletter iframe {
-  width: 90%;
+
+.contact iframe {
+  width: 100%;
   height: 100%;
 }
 /*===========================================
@@ -556,25 +573,31 @@ footer {
 /*===========================================
   MEDIA QUERIES
 ===========================================*/
+
+@media (max-width: 1170px) {
+  .hero__nav-list,
+  nav .btn {
+    display: none;
+  }
+  .hero__nav .hero__menu-toggle {
+    display: block;
+  }
+}
 @media (max-width: 768px) {
   html {
     font-size: 12px;
   }
-  .nav-list,
-  nav .btn {
-    display: none;
-  }
-  .navbar .fa-bars {
-    display: block;
-    font-size: 30px;
-    text-decoration: none;
-    color: #bb0667;
-  }
-  .hero-content h1 {
+  .hero__content h1 {
     line-height: 1.2;
+    font-size: 4rem;
   }
 }
-
+@media (max-width: 570px) {
+  .hero__content {
+    margin-top: 5rem;
+    align-content: start;
+  }
+}
 /*-------------------------------------------
   Animação de fundo
 -------------------------------------------*/

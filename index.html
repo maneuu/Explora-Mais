@@ -18,20 +18,20 @@
 <body>
     <header class="hero">
         <div class="container">
-            <div class="overlay"></div>
-            <nav class="navbar">
-                <h1 class="logo">EXPLORA <img src="img/add.png" alt=""></h1>
+            <div class="hero__overlay"></div>
+            <nav class="hero__nav">
+                <h1 class="hero__logo">EXPLORA <img src="img/add.png" alt=""></h1>
 
-                <a href=""><i class="fa-solid fa-bars"></i></a>
+                <a href="" class="hero__menu-toggle"><i class="fa-solid fa-bars"></i></a>
 
-                <ul class="nav-list">
+                <ul class="hero__nav-list">
                     <li><a href="#services">Serviços</a></li>
                     <li><a href="#places">Lugares Famosos</a></li>
                     <li><a href="#contatos">Fale Conosco</a></li>
                 </ul>
                 <button class="btn"><img src="img/icon.png" alt="">Reservas</button>
             </nav>
-            <div class="hero-content">
+            <div class="hero__content">
                 <h1>Lugares incríveis<br>para explorar</h1>
                 <p>Descubra destinos fascinantes ao redor do mundo. Encontre as melhores opções para viajar, explorar culturas e aproveitar as maravilhas de cada lugar.</p>
                 <form action="">
@@ -45,36 +45,34 @@
     <main>
         <section class="services" id="services">
             <div class="container">
-                <div class="section-header">
-                    <h2>Nossos Serviços</h2>
-                </div>
-                <div class="cards">
-                    <div class="card">
+                <h2 class="services__title">Nossos Serviços</h2>
+                <div class="services__cards">
+                    <div class="services__card">
                         <i class="fa-solid fa-plane-departure"></i>
                         <h2>Reserva de Voos</h2>
                         <p>Oferecemos serviços de reserva de voos para os destinos dos seus sonhos a preços competitivos.</p>
                     </div>
-                    <div class="card">
+                    <div class="services__card">
                         <i class="fa-solid fa-hotel"></i>
                         <h2>Reservas de Hotéis</h2>
                         <p>Escolha entre uma ampla variedade de acomodações, adaptadas às suas necessidades e preferências.</p>
                     </div>
-                    <div class="card">
+                    <div class="services__card">
                         <i class="fa-solid fa-map-marked-alt"></i>
                         <h2>Pacotes de Viagem</h2>
                         <p>Explore pacotes de viagem personalizados que oferecem experiências e aventuras inesquecíveis.</p>
                     </div>
-                    <div class="card">
+                    <div class="services__card">
                         <i class="fa-solid fa-suitcase-rolling"></i>
                         <h2>Assistência de Viagem</h2>
                         <p>Nossa equipe garante todo o suporte necessário para que sua viagem seja tranquila e agradável.</p>
                     </div>
-                    <div class="card">
+                    <div class="services__card">
                         <i class="fa-solid fa-ship"></i>
                         <h2>Reservas de Cruzeiros</h2>
                         <p>Descubra experiências luxuosas em cruzeiros com itinerários exclusivos pelo mundo.</p>
                     </div>
-                    <div class="card">
+                    <div class="services__card">
                         <i class="fa-solid fa-passport"></i>
                         <h2>Assistência para Visto</h2>
                         <p>Deixe o processo de visto conosco para tornar sua viagem internacional simples e sem preocupações.</p>
@@ -83,23 +81,21 @@
             </div>
         </section>
 
-        <section class="package">
+        <section class="packages">
             <div class="container">
-                <div class="title">
-                    <h2>Pacotes</h2>
-                </div>
-                <div class="package-content">
+                <h2>Pacotes</h2>
+                <div class="packages__content">
                     <div class="box">
-                        <div class="thum">
-                            <img src="img/pack01.jpg" alt="">
-                            <h3 class="preco">$499</h3>
+                        <div class="packages__thumbnail">
+                            <img src="img/pack01.jpg" alt="Pacote para Atenas, Grécia">
+                            <h3 class="packages__price">$499</h3>
                         </div>
-                        <div class="dest-content">
-                            <div class="location">
+                        <div class="packages__details">
+                            <div class="packages__location">
                                 <h4>Atenas, Grécia</h4>
                                 <p>4h - 5h</p>
                             </div>
-                            <div class="stars">
+                            <div class="packages__rating">
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
@@ -109,16 +105,16 @@
                         </div>
                     </div>
                     <div class="box">
-                        <div class="thum">
-                            <img src="img/pack04.jpg" alt="">
-                            <h3 class="preco">$499</h3>
+                        <div class="packages__thumbnail">
+                            <img src="img/pack04.jpg" alt="Pacote para Malmö, Suécia">
+                            <h3 class="packages__price">$499</h3>
                         </div>
-                        <div class="dest-content">
-                            <div class="location">
+                        <div class="packages__details">
+                            <div class="packages__location">
                                 <h4>Malmö, Suécia </h4>
                                 <p>4h - 5h</p>
                             </div>
-                            <div class="stars">
+                            <div class="packages__rating">
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
@@ -128,16 +124,16 @@
                         </div>
                     </div>
                     <div class="box">
-                        <div class="thum">
-                            <img src="img/pack03.jpg" alt="">
-                            <h3 class="preco">$499</h3>
+                        <div class="packages__thumbnail">
+                            <img src="img/pack03.jpg" alt="Pacote para Reykjavík, Islândia">
+                            <h3 class="packages__price">$499</h3>
                         </div>
-                        <div class="dest-content">
-                            <div class="location">
+                        <div class="packages__details">
+                            <div class="packages__location">
                                 <h4>Reykjavík, Islândia</h4>
                                 <p>4h - 5h</p>
                             </div>
-                            <div class="stars">
+                            <div class="packages__rating">
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
@@ -150,43 +146,43 @@
             </div>
         </section>
 
-        <div class="bg1">
+        <div class="places__bg">
             <section class="places" id="places">
                 <h2>Os lugares mais indicados</h2>
                 <p>Destinos que você não pode perder!</p>
-                <div class="secao-img">
-                    <img src="img/place01.jpg" alt="">
-                    <div class="lugar"> Cancún, México<br>R$10000</div>
+                <div class="places__item">
+                    <img src="img/place01.jpg" alt="Cancún, México">
+                    <div class="places__location"> Cancún, México<br>R$10000</div>
                 </div>
-                <div class="secao-img">
-                    <img src="img/place02.jpg" alt="">
-                    <div class="lugar">Gizé, Egito<br>R$10000</div>
+                <div class="places__item">
+                    <img src="img/place02.jpg" alt="Gizé, Egito">
+                    <div class="places__location">Gizé, Egito<br>R$10000</div>
                 </div>
-                <div class="secao-img">
-                    <img src="img/place03.jpg" alt="">
-                    <div class="lugar">Lisboa, Portugal<br>R$10000</div>
+                <div class="places__item">
+                    <img src="img/place03.jpg" alt="Lisboa, Portugal">
+                    <div class="places__location">Lisboa, Portugal<br>R$10000</div>
                 </div>
-                <div class="secao-img">
-                    <img src="img/place04.jpg" alt="">
-                    <div class="lugar">Londres, Reino Unido<br>R$10000</div>
+                <div class="places__item">
+                    <img src="img/place04.jpg" alt="Londres, Reino Unido">
+                    <div class="places__location">Londres, Reino Unido<br>R$10000</div>
                 </div>
-                <div class="secao-img">
-                    <img src="img/place05.jpeg" alt="">
-                    <div class="lugar">Orlando, Estados Unidos<br>R$10000</div>
+                <div class="places__item">
+                    <img src="img/place05.jpeg" alt="Orlando, Estados Unidos">
+                    <div class="places__location">Orlando, Estados Unidos<br>R$10000</div>
                 </div>
-                <div class="secao-img">
-                    <img src="img/place06.jpg" alt="">
-                    <div class="lugar">Santiago, Chile<br>R$10000</div>
+                <div class="places__item">
+                    <img src="img/place06.jpg" alt="Santiago, Chile">
+                    <div class="places__location">Santiago, Chile<br>R$10000</div>
                 </div>
             </section>
         </div>
 
-        <section class="newsletter">
+        <section class="contact">
             <div class="container">
                 <h2>Contato</h2>
                 <p>Tem alguma dúvida?<br> Fale conosco!
                 </p>
-                <address class="contatos" id="contatos">
+                <address class="contact__info" id="contatos">
                     <div>
                         <i class="fa-solid fa-location-dot"></i>
                         <p>Rua das Palmeiras, 1203 <br> Sala 402, Manaíra, João Pessoa - PB, 58038-000</p>
@@ -195,7 +191,7 @@
                         <i class="fa-solid fa-envelope"></i>
                         <p>
                             <a href="mailto:contato@exploramais.com">contato@exploramais.com</a><br>
-                            <a href="mailto:suporte.exploramais@hotmail.com">suporte.exploramais@hotmail.com</a>
+                            <a href="mailto:suporte.exploramais@hotmail.com">exploramais@hotmail.com</a>
                         </p>
                     </div>
                     <div>
@@ -206,7 +202,7 @@
                         </p>
                     </div>
                 </address>
-                <div class="grid">
+                <div class="contact__form-map">
                     <form action="">
                         <input type="text" placeholder="Nome" class="input">
                         <input type="email" placeholder="Email" class="input">
@@ -222,13 +218,11 @@
     </main>
     <footer>
         <div class="footer-container">
-            <!-- Sobre a Agência -->
             <div class="footer-section">
                 <h3>Sobre Nós</h3>
                 <p>Somos uma agência de viagens comprometida em oferecer as melhores experiências pelo mundo. Viaje com conforto, segurança e muita diversão!</p>
             </div>
 
-            <!-- Links Úteis -->
             <div class="footer-section">
                 <h3>Links Rápidos</h3>
                 <ul>
@@ -242,7 +236,6 @@
                 </ul>
             </div>
 
-            <!-- Suporte -->
             <div class="footer-section">
                 <h3>Suporte</h3>
                 <ul>
