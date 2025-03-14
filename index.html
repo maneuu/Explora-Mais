@@ -13,9 +13,12 @@
     <!-- fiveicon -->
     <link rel="icon" type="image/png" href="img/fiveicon.png">
 
+    <!-- tailwind -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="font-[Poppins]">
     <header class="hero">
         <div class="container">
             <div class="hero__overlay"></div>
@@ -82,9 +85,90 @@
         </section>
 
         <section class="packages">
+            <h2>Pacotes</h2>
             <div class="container">
-                <h2>Pacotes</h2>
                 <div class="packages__content">
+                    <div class="box">
+                        <div class="packages__thumbnail">
+                            <img src="img/package/Amsterdam_.jpg" alt="Pacote para Malmö, Suécia">
+                            <h3 class="packages__price">$450</h3>
+                        </div>
+                        <div class="packages__details">
+                            <div class="packages__location">
+                                <h4>Pacote Encantos de Amsterdã </h4>
+                                <p>14 dias</p>
+                            </div>
+                            <p class="packages__description">Explore a charmosa cidade de Amsterdã, com seus canais históricos e museus renomados. Uma experiência única e cultural.</p>
+                            <div class="packages__rating">
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="packages__thumbnail">
+                            <img src="img/package/Turquia_.jpg" alt="Pacote para Malmö, Suécia">
+                            <h3 class="packages__price">$750</h3>
+                        </div>
+                        <div class="packages__details">
+                            <div class="packages__location">
+                                <h4>Pacote Magia da Capadócia, Turquia </h4>
+                                <p>5 dias</p>
+                            </div>
+                            <p class="packages__description">Viva a experiência única de sobrevoar as incríveis formações rochosas e conhecer as antigas cidades subterrâneas da Capadócia.</p>
+                            <div class="packages__rating">
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="packages__thumbnail">
+                            <img src="img/package/Austria.jpg" alt="Pacote para Malmö, Suécia">
+                            <h3 class="packages__price">$150</h3>
+                        </div>
+                        <div class="packages__details">
+                            <div class="packages__location">
+                                <h4>Aventura nas Montanhas de Hintertux, Áustria</h4>
+                                <p>8 dias</p>
+                            </div>
+                            <p class="packages__description">Descubra o cenário deslumbrante das montanhas austríacas e aproveite as emoções do esqui em um dos destinos mais icônicos da Europa.</p>
+                            <div class="packages__rating">
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="packages__thumbnail">
+                            <img src="img/package/China muralha.jpg" alt="Pacote para Malmö, Suécia">
+                            <h3 class="packages__price">$600</h3>
+                        </div>
+                        <div class="packages__details">
+                            <div class="packages__location">
+                                <h4>Pacote Histórico na Grande Muralha da China
+                                </h4>
+                                <p>5 dias</p>
+                            </div>
+                            <p class="packages__description">Explore a imponente Grande Muralha da China, um dos maiores marcos históricos do mundo, e mergulhe em séculos de cultura e história.</p>
+                            <div class="packages__rating">
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="box">
                         <div class="packages__thumbnail">
                             <img src="img/pack01.jpg" alt="Pacote para Atenas, Grécia">
@@ -92,9 +176,10 @@
                         </div>
                         <div class="packages__details">
                             <div class="packages__location">
-                                <h4>Atenas, Grécia</h4>
-                                <p>4h - 5h</p>
+                                <h4>Pacote Aventura em Atenas, Grécia</h4>
+                                <p>1 semana</p>
                             </div>
+                            <p class="packages__description">Explore Atenas e descubra sua história fascinante, com visitas à Acrópole e outros marcos históricos. Uma viagem única pela cultura grega.</p>
                             <div class="packages__rating">
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
@@ -104,16 +189,18 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="box">
                         <div class="packages__thumbnail">
-                            <img src="img/pack04.jpg" alt="Pacote para Malmö, Suécia">
-                            <h3 class="packages__price">$499</h3>
+                            <img src="img/pack02.jpg" alt="Pacote para Paris, França">
+                            <h3 class="packages__price">$399</h3>
                         </div>
                         <div class="packages__details">
                             <div class="packages__location">
-                                <h4>Malmö, Suécia </h4>
-                                <p>4h - 5h</p>
+                                <h4>Aventura nas Cataratas do Iguaçu</h4>
+                                <p>3h - 4h</p>
                             </div>
+                            <p class="packages__description">Conheça as deslumbrantes Cataratas do Iguaçu, uma das maravilhas naturais do mundo. Aprecie a grandiosidade das quedas d'água em um passeio inesquecível. </p>
                             <div class="packages__rating">
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
@@ -123,16 +210,18 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="box">
                         <div class="packages__thumbnail">
                             <img src="img/pack03.jpg" alt="Pacote para Reykjavík, Islândia">
-                            <h3 class="packages__price">$499</h3>
+                            <h3 class="packages__price">$549</h3>
                         </div>
                         <div class="packages__details">
                             <div class="packages__location">
                                 <h4>Reykjavík, Islândia</h4>
-                                <p>4h - 5h</p>
+                                <p>3 dias</p>
                             </div>
+                            <p class="packages__description">Explore a capital islandesa e seus incríveis fenômenos naturais, como gêiseres e cachoeiras, em uma experiência inesquecível.</p>
                             <div class="packages__rating">
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
                                 <a href="#"><i class="fa-solid fa-star"></i></a>
@@ -142,8 +231,52 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="box">
+                        <div class="packages__thumbnail">
+                            <img src="img/pack04.jpg" alt="Pacote para Malmö, Suécia">
+                            <h3 class="packages__price">$450</h3>
+                        </div>
+                        <div class="packages__details">
+                            <div class="packages__location">
+                                <h4>Descubra Malmö, Suécia</h4>
+                                <p>5 dias</p>
+                            </div>
+                            <p class="packages__description">Conheça a charmosa Malmö, com suas ruas históricas, belos parques e a famosa Turning Torso. Uma viagem perfeita para relaxar e explorar.</p>
+                            <div class="packages__rating">
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="packages__thumbnail">
+                            <img src="img/package/Tokyo.jpg" alt="Pacote para Malmö, Suécia">
+                            <h3 class="packages__price">$450</h3>
+                        </div>
+                        <div class="packages__details">
+                            <div class="packages__location">
+                                <h4>Aventura Urbana em Tóquio, Japão</h4>
+                                <p>5 dias</p>
+                            </div>
+                            <p class="packages__description">Mergulhe no coração pulsante de Tóquio, onde a tecnologia, cultura e gastronomia se unem para criar uma experiência inesquecível.</p>
+                            <div class="packages__rating">
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                                <a href="#"><i class="fa-solid fa-star"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
         </section>
 
         <div class="places__bg">
