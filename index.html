@@ -23,7 +23,7 @@
     <header class="hero">
         <div class="container">
             <div class="hero__overlay"></div>
-            <nav class="flex justify-between items-center py-2 px-4 md:px-8 relative z-50 backdrop-blur-md">
+            <nav class="flex justify-between items-center py-6 px-4 md:px-8 relative z-50">
                 <!-- Logo -->
                 <h1 class="flex items-center gap-2.5 text-white text-xl sm:text-2xl md:text-3xl lg:text-[3rem] w-[180px] cursor-pointer font-poppins">
                     <span class="tracking-[0.2em]">EXPLORA</span>
@@ -34,7 +34,7 @@
 
 
                 <!-- Menu Desktop -->
-                <ul class="hidden md:flex items-center pr-[60px] space-x-[20px]">
+                <ul class="hidden md:flex items-center pr-[60px] space-x-[40px]">
                     <li>
                         <a href="#services" class="text-gray-300 hover:text-white transition-colors relative nav-link">
                             Serviços
@@ -143,9 +143,9 @@
 
     <main>
 
-        <section class="w-full mx-auto py-10">
+        <section class="w-full mx-auto py-10 ">
             <!-- Title -->
-            <h2 class="services__title">Nossos Serviços</h2>
+            <h2 class="services__title" id="#services">Nossos Serviços</h2>
 
             <div class="w-full h-full flex flex-col items-center md:py-4 py-10">
                 <!-- Col - 2 -->
@@ -493,13 +493,22 @@
                     </div>
                 </address>
                 <div class="contact__form-map">
-                    <form action="">
-                        <input type="text" placeholder="Nome" class="input">
-                        <input type="email" placeholder="Email" class="input">
-                        <input type="text" placeholder="Assunto" class="input">
-                        <textarea name="" id="" cols="20" rows="8" placeholder="Mensagem" class="input"></textarea>
+                    <form action="#" method="POST" id="contactForm">
+                        <input type="text" id="name" name="name" class="input" placeholder="Nome" required minlength="3">
+                        <input type="email" id="email" name="email" class="input" placeholder="Email" required>
+                        <input type="text" id="subject" name="subject" class="input" placeholder="Assunto" required minlength="5">
+                        <textarea id="message" name="message" class="input" cols="20" rows="8" placeholder="Mensagem" required minlength="10"></textarea>
                         <button type="submit" class="btn">Enviar</button>
                     </form>
+
+                    <script>
+                        document.getElementById("contactForm").addEventListener("submit", function (event) {
+                            event.preventDefault(); // Impede o envio real do formulário
+                            alert("Formulário enviado com sucesso! Entraremos em contato em breve.");
+                        });
+                    </script>
+
+
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9173254616976!2d-34.87604522409076!3d-7.135558969990579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace810852ae4f1%3A0xaf5445223401f2bb!2sIFPB%20-%20Campus%20Jo%C3%A3o%20Pessoa!5e0!3m2!1spt-BR!2sbr!4v1739217156534!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
