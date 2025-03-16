@@ -27,7 +27,7 @@ section {
   padding: 10px 8%;
 }
 .container {
-  max-width: 75rem;
+  max-width: 90rem;
   margin: 0 auto;
   border: 1px solid transparent;
 }
@@ -226,6 +226,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   gap: 1rem;
   margin-top: 5rem;
+  max-width: calc(3 * 30rem);
 }
 
 .services__card {

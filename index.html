@@ -17,25 +17,116 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-
 </head>
 
 <body class="font-[Poppins]">
     <header class="hero">
         <div class="container">
             <div class="hero__overlay"></div>
-            <nav class="hero__nav">
-                <h1 class="hero__logo">EXPLORA <img src="img/add.png" alt=""></h1>
+            <nav class="flex justify-between items-center py-2 px-4 md:px-8 relative z-50 backdrop-blur-md">
+                <!-- Logo -->
+                <h1 class="flex items-center gap-2.5 text-white text-[3rem] w-[180px] cursor-pointer font-poppins">
+                    <span class="tracking-[0.2em]">EXPLORA</span> <img src="img/add.png" alt="" class="h-[30px]">
+                </h1>
 
-                <a href="" class="hero__menu-toggle"><i class="fa-solid fa-bars"></i></a>
 
-                <ul class="hero__nav-list">
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#places">Lugares Famosos</a></li>
-                    <li><a href="#contatos">Fale Conosco</a></li>
+                <!-- Menu Desktop -->
+                <ul class="hidden md:flex items-center pr-[60px] space-x-[20px]">
+                    <li>
+                        <a href="#services" class="text-gray-300 hover:text-white transition-colors relative nav-link">
+                            Serviços
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#places" class="text-gray-300 hover:text-white transition-colors relative nav-link">
+                            Lugares Famosos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contatos" class="text-gray-300 hover:text-white transition-colors relative nav-link">
+                            Fale Conosco
+                        </a>
+                    </li>
                 </ul>
-                <button class="btn"><img src="img/icon.png" alt="">Reservas</button>
+
+                <!-- Botão Reserva Desktop -->
+                <button class="hidden md:flex items-center bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition-colors">
+                    <img src="img/icon.png" alt="" class="h-5 mr-2"> Reservas
+                </button>
+
+                <!-- Hamburger Menu Mobile -->
+                <button id="menuBtn" class="md:hidden text-white">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-gray-900/80 backdrop-blur-lg md:hidden">
+                    <ul class="flex flex-col items-center py-8 space-y-8">
+                        <li>
+                            <a href="#services" class="text-gray-300 hover:text-white text-xl px-4 py-3 transition-colors">
+                                Serviços
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#places" class="text-gray-300 hover:text-white text-xl px-4 py-3 transition-colors">
+                                Lugares Famosos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contatos" class="text-gray-300 hover:text-white text-xl px-4 py-3 transition-colors">
+                                Fale Conosco
+                            </a>
+                        </li>
+                        <li>
+                            <button class="flex items-center bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition-colors">
+                                <img src="img/icon.png" alt="" class="h-6 mr-3"> Reservas
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </nav>
+
+            <style>
+                .nav-link::after {
+                    content: "";
+                    position: absolute;
+                    background-color: #f5168d;
+                    height: 3px;
+                    width: 0;
+                    left: 0;
+                    bottom: -10px;
+                    transition: 0.4s ease-in-out;
+                }
+
+                .nav-link:hover::after {
+                    width: 100%;
+                }
+            </style>
+
+
+            <script>
+                const menuBtn = document.getElementById('menuBtn');
+                const mobileMenu = document.getElementById('mobileMenu');
+
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Fechar menu ao clicar fora
+                document.addEventListener('click', (e) => {
+                    if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+
+                // Fechar menu ao clicar em um link
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            </script>
             <div class="hero__content">
                 <h1>Lugares incríveis<br>para explorar</h1>
                 <p>Descubra destinos fascinantes ao redor do mundo. Encontre as melhores opções para viajar, explorar culturas e aproveitar as maravilhas de cada lugar.</p>
@@ -312,6 +403,7 @@
             </section>
         </div>
         <!-- TESTIMONINAL REVIEWS -->
+        <!-- com tailwind -->
         <section class="py-20 bg-gray-100 text-[#434343]">
             <div class="container">
                 <div class="max-w-6xl mx-auto px-5">
