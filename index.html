@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="font-[Poppins]">
+<body class="font-[Poppins] bg-white">
     <header class="hero">
         <div class="container">
             <div class="hero__overlay"></div>
@@ -139,11 +139,83 @@
                 </form>
             </div>
         </div>
+        <style>
+            .carousel-container {
+                perspective: 1000px;
+                touch-action: pan-y pinch-zoom;
+            }
+
+            .carousel-track {
+                transform-style: preserve-3d;
+                transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            .carousel-item {
+                backface-visibility: hidden;
+                transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            .carousel-item.active {
+                opacity: 1;
+                transform: scale(1) translateZ(0);
+            }
+
+            @media (max-width: 640px) {
+                .carousel-item.prev {
+                    opacity: 0;
+                    transform: scale(0.8) translateX(-50%) translateZ(-100px);
+                }
+
+                .carousel-item.next {
+                    opacity: 0;
+                    transform: scale(0.8) translateX(50%) translateZ(-100px);
+                }
+            }
+
+            @media (min-width: 641px) {
+                .carousel-item.prev {
+                    opacity: 0.7;
+                    transform: scale(0.9) translateX(-100%) translateZ(-100px);
+                }
+
+                .carousel-item.next {
+                    opacity: 0.7;
+                    transform: scale(0.9) translateX(100%) translateZ(-100px);
+                }
+            }
+
+            .carousel-item.hidden {
+                opacity: 0;
+                transform: scale(0.8) translateZ(-200px);
+            }
+
+            .nav-button {
+                transition: all 0.3s;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+            }
+
+            @media (hover: hover) {
+                .nav-button:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                    transform: scale(1.1);
+                }
+            }
+
+            .nav-button:active {
+                transform: scale(0.95);
+            }
+
+            .progress-bar {
+                transition: width 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+        </style>
     </header>
 
-    <main>
+    <main class="bg-white">
 
-        <section class="w-full mx-auto py-10 ">
+        <section class="w-full mx-auto py-10 bg-white">
             <!-- Title -->
             <h2 class="services__title" id="#services">Nossos Serviços</h2>
 
@@ -178,34 +250,13 @@
 
         <!-- Photo by '@candjstudios' & '@framesforyourheart' on Unsplash -->
 
-        <section class="packages">
+        <section class="packages bg-white">
             <h2>Pacotes</h2>
             <div class="container">
                 <div class="packages__content">
-                    <a href="pages/test.html" class="block">
-                        <div class="box">
-                            <div class="packages__thumbnail">
-                                <img src="img/package/Amsterdam_.jpg" alt="Pacote para Malmö, Suécia">
-                                <h3 class="packages__price">$450</h3>
-                            </div>
-                            <div class="packages__details">
-                                <div class="packages__location">
-                                    <h4>Pacote Encantos de Amsterdã</h4>
-                                    <p>14 dias</p>
-                                </div>
-                                <p class="packages__description">Explore a charmosa cidade de Amsterdã, com seus canais históricos e museus renomados. Uma experiência única e cultural.</p>
-                                <div class="packages__rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <!--  -->
 
-                    <a href="">
+                    <a href="pages/test.html">
                         <div class="box">
                             <div class="packages__thumbnail">
                                 <img src="img/package/Turquia_.jpg" alt="Pacote para Malmö, Suécia">
@@ -227,6 +278,28 @@
                             </div>
                         </div>
                     </a>
+                    <!-- <a href="#" class="block">
+                        <div class="box">
+                            <div class="packages__thumbnail">
+                                <img src="img/package/Amsterdam_.jpg" alt="Pacote para Malmö, Suécia">
+                                <h3 class="packages__price">$450</h3>
+                            </div>
+                            <div class="packages__details">
+                                <div class="packages__location">
+                                    <h4>Pacote Encantos de Amsterdã</h4>
+                                    <p>14 dias</p>
+                                </div>
+                                <p class="packages__description">Explore a charmosa cidade de Amsterdã, com seus canais históricos e museus renomados. Uma experiência única e cultural.</p>
+                                <div class="packages__rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a> -->
                     <div class="box">
                         <div class="packages__thumbnail">
                             <img src="img/package/Austria.jpg" alt="Pacote para Malmö, Suécia">
@@ -379,34 +452,178 @@
         </section>
 
         <div class="places__bg">
-            <section class="places" id="places">
-                <h2>Os lugares mais indicados</h2>
-                <p>Destinos que você não pode perder!</p>
-                <div class="places__item">
-                    <img src="img/place01.jpg" alt="Cancún, México">
-                    <div class="places__location"> Cancún, México<br>R$10000</div>
+            <div class="fixed inset-0 -z-10">
+                <div class="absolute top-1/4 left-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-violet-500/10 rounded-full filter blur-3xl"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-fuchsia-500/10 rounded-full filter blur-3xl"></div>
+            </div>
+
+            <!-- Main container -->
+            <div class="w-full max-w-6xl mx-auto">
+                <!-- Carousel container -->
+                <div class="carousel-container relative">
+
+                    <!-- Navigation buttons -->
+                    <button class="nav-button absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-white touch-manipulation" onclick="prevSlide()" title="Previous slide">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+
+                    <button class="nav-button absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-white touch-manipulation" onclick="nextSlide()" title="Next slide">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Carousel track -->
+                    <div class="carousel-track relative h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden">
+                        <!-- Carousel items -->
+
+                        <div class="carousel-item active absolute top-0 left-0 w-full h-full">
+                            <div class="w-full h-full p-4 sm:p-8">
+                                <a href="#" class="block w-full h-full">
+                                    <div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+                                        <img src="img/place01.jpg" alt="Geometric art installation" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                        <div class="absolute inset-0"></div>
+                                        <div class="absolute inset-x-0 bottom-0 p-4 sm:p-8">
+                                            <h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">Digital Prism</h3>
+                                            <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">Where geometry meets art in a stunning display of light and form.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item next absolute top-0 left-0 w-full h-full">
+                            <div class="w-full h-full p-4 sm:p-8">
+                                <a href="#" class="block w-full h-full">
+                                    <div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+                                        <img src="img/place02.jpg" alt="Futuristic tech setup" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                        <div class="absolute inset-0"></div>
+                                        <div class="absolute inset-x-0 bottom-0 p-4 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                                            <h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">Tech Haven</h3>
+                                            <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">Immerse yourself in the cutting edge of technology and innovation.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item hidden absolute top-0 left-0 w-full h-full">
+                            <div class="w-full h-full p-4 sm:p-8">
+                                <a href="#" class="block w-full h-full">
+                                    <div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+                                        <img src="img/place03.jpg" alt="Abstract digital art" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                        <div class="absolute inset-0"></div>
+                                        <div class="absolute inset-x-0 bottom-0 p-4 sm:p-8 to-transparent">
+                                            <h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">Neural Dreams</h3>
+                                            <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">AI-generated masterpieces that blur the line between human and machine creativity.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Indicators -->
+                    <div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-2 z-20">
+                        <button class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/40 hover:bg-white/60 transition-colors" title="Go to slide 1"></button>
+                        <button class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/20 hover:bg-white/60 transition-colors" title="Go to slide 2"></button>
+                        <button class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/20 hover:bg-white/60 transition-colors" title="Go to slide 3"></button>
+                    </div>
                 </div>
-                <div class="places__item">
-                    <img src="img/place02.jpg" alt="Gizé, Egito">
-                    <div class="places__location">Gizé, Egito<br>R$10000</div>
-                </div>
-                <div class="places__item">
-                    <img src="img/place03.jpg" alt="Lisboa, Portugal">
-                    <div class="places__location">Lisboa, Portugal<br>R$10000</div>
-                </div>
-                <div class="places__item">
-                    <img src="img/place04.jpg" alt="Londres, Reino Unido">
-                    <div class="places__location">Londres, Reino Unido<br>R$10000</div>
-                </div>
-                <div class="places__item">
-                    <img src="img/place05.jpeg" alt="Orlando, Estados Unidos">
-                    <div class="places__location">Orlando, Estados Unidos<br>R$10000</div>
-                </div>
-                <div class="places__item">
-                    <img src="img/place06.jpg" alt="Santiago, Chile">
-                    <div class="places__location">Santiago, Chile<br>R$10000</div>
-                </div>
-            </section>
+            </div>
+
+            <script>
+                let currentSlide = 0;
+                const slides = document.querySelectorAll('.carousel-item');
+                const indicators = document.querySelectorAll('.bottom-2 button, .bottom-4 button');
+                const progressBar = document.querySelector('.progress-bar');
+                let autoAdvanceTimer;
+                let touchStartX = 0;
+                let touchEndX = 0;
+                const carousel = document.querySelector('.carousel-track');
+
+                // Add touch events for swipe
+                carousel.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                carousel.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                }, { passive: true });
+
+                function handleSwipe() {
+                    const swipeThreshold = 50;
+                    const diff = touchStartX - touchEndX;
+
+                    if (Math.abs(diff) > swipeThreshold) {
+                        if (diff > 0) {
+                            nextSlide();
+                        } else {
+                            prevSlide();
+                        }
+                    }
+                }
+
+                function updateSlides() {
+                    slides.forEach((slide, index) => {
+                        slide.className = 'carousel-item absolute top-0 left-0 w-full h-full';
+                        if (index === currentSlide) {
+                            slide.classList.add('active');
+                        } else if (index === (currentSlide + 1) % slides.length) {
+                            slide.classList.add('next');
+                        } else if (index === (currentSlide - 1 + slides.length) % slides.length) {
+                            slide.classList.add('prev');
+                        } else {
+                            slide.classList.add('hidden');
+                        }
+                    });
+
+                    // Update indicators
+                    indicators.forEach((indicator, index) => {
+                        indicator.className = `w-8 sm:w-12 h-1 sm:h-1.5 rounded-full transition-colors ${index === currentSlide ? 'bg-white/40' : 'bg-white/20'
+                            } hover:bg-white/60`;
+                    });
+
+                    // Update progress bar
+                    progressBar.style.width = `${((currentSlide + 1) / slides.length) * 100}%`;
+                }
+
+                function resetAutoAdvance() {
+                    clearInterval(autoAdvanceTimer);
+                    autoAdvanceTimer = setInterval(nextSlide, 5000);
+                }
+
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    updateSlides();
+                    resetAutoAdvance();
+                }
+
+                function prevSlide() {
+                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    updateSlides();
+                    resetAutoAdvance();
+                }
+
+                // Add click handlers to indicators
+                indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => {
+                        currentSlide = index;
+                        updateSlides();
+                        resetAutoAdvance();
+                    });
+                });
+
+                // Initialize auto advance
+                resetAutoAdvance();
+
+                // Initialize slides
+                updateSlides();
+            </script>
+
         </div>
         <!-- TESTIMONINAL REVIEWS -->
         <!-- com tailwind -->

@@ -386,81 +386,14 @@ section {
 /*===========================================
   SEÇÃO PLACES
 ===========================================*/
-.places {
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
-  gap: 15px;
-  margin-top: 80px;
-}
+
 .places__bg {
   background: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 2rem 0 6rem;
-}
-
-.places h2 {
-  text-align: center;
-  margin: 0;
-  font-size: var(--h2-font);
-  color: #fff;
-  grid-column: 1/-1;
-  letter-spacing: 1.6px;
-}
-.places p {
-  grid-column: 1/-1;
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-.places img {
-  width: 100%;
-  height: 15.625rem;
-  object-fit: cover;
-  border-radius: 0.625rem;
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.places img:hover {
-  transform: scale(1.03);
-  cursor: pointer;
-}
-
-.places__item {
-  position: relative;
-  overflow: hidden;
-}
-
-.places__item img {
-  display: block;
-  width: 100;
-}
-
-.places__location {
-  color: white;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
-  height: 20%;
-  justify-content: center;
-  transition: bottom 0.4s ease;
-  bottom: -20%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.places__item:hover .places__location {
-  bottom: 0;
+  padding: 4rem 0;
 }
 
 /* =========================================
