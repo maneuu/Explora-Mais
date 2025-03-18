@@ -56,6 +56,7 @@ section {
   background-repeat: no-repeat;
   padding: 0.625rem 8%;
   position: relative;
+  background-attachment: fixed;
 }
 
 .hero__overlay {
@@ -64,8 +65,9 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(rgba(9, 0, 77, 0.65), rgba(9, 0, 77, 0.65));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
 }
+
 .hero .container {
   height: 100%;
 }
@@ -560,9 +562,9 @@ section {
     display: block;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 888px) {
   html {
-    font-size: 12px;
+    font-size: 13px;
   }
   .hero__content h1 {
     line-height: 1.2;
@@ -574,7 +576,9 @@ section {
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+  }
+  .hero__content h1 {
+    font-size: 3.3rem;
   }
 }
 /*-------------------------------------------
