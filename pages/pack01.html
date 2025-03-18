@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacote Capadócia, Turquia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Botão Voltar Melhorado -->
+    <a href="../index.html" id="backButton" class="fixed z-50 flex items-center bg-white text-gray-800 px-4 py-3 rounded-full shadow-md hover:bg-gray-100 transition-all duration-300 transform
+      top-4 left-4
+      text-sm md:text-base
+      ">
+        <i class="fa-solid fa-arrow-left mr-2"></i>
+        <span class="hidden md:inline">Home</span>
+    </a>
+
+    <script>
+        const backButton = document.getElementById('backButton');
+        let lastScroll = 0;
+        const mobileBreakpoint = 768; // Breakpoint para desktop
+
+        // Função para verificar se é mobile
+        function isMobile() {
+            return window.innerWidth < mobileBreakpoint;
+        }
+
+        // Controle de visibilidade ao scrollar
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (isMobile()) {
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    backButton.classList.add('opacity-0', '-translate-y-10');
+                } else {
+                    backButton.classList.remove('opacity-0', '-translate-y-10');
+                }
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Ajuste de tamanho para mobile
+        function adjustButton() {
+            if (isMobile()) {
+                backButton.classList.add('px-3', 'py-2');
+                backButton.querySelector('span').classList.add('hidden');
+            } else {
+                backButton.classList.remove('px-3', 'py-2');
+                backButton.querySelector('span').classList.remove('hidden');
+            }
+        }
+
+        // Inicialização
+        adjustButton();
+        window.addEventListener('resize', adjustButton);
+
+        // Feedback tátil
+        backButton.addEventListener('touchstart', () => {
+            backButton.classList.add('scale-90');
+        });
+
+        backButton.addEventListener('touchend', () => {
+            backButton.classList.remove('scale-90');
+        });
+    </script>
+
+    <header class="relative h-[600px]">
+        <img src="https://dicasdaeuropa.com.br/wp-content/uploads/2023/03/capadocia-turquia.jpg" alt="Maldivas" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/50 flex items-center">
+            <div class="container mx-auto px-4 text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Capadócia, Turquia</h1>
+                <div class="flex justify-center gap-8 mb-8">
+                    <div class="flex items-center">
+
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>5 Dias / 4 Noites</span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span>Resort 5 Estrelas</span>
+                    </div>
+                </div>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Explore a Capadócia, onde a história se encontra com paisagens surreais, repletas de formações rochosas e balões coloridos ao amanhecer.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                    <p class="text-4xl font-bold">R$ 12.999<span class="text-lg">/por pessoa</span></p>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition duration-300 transform hover:scale-105">
+                        Reservar Agora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Detalhes do Pacote -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-3 gap-12">
+            <!-- Destaques -->
+            <div class="md:col-span-2">
+                <h2 class="text-3xl font-bold mb-8">Sobre o Pacote</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">Inclui</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                                Passagem Aérea Econômica
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                                Hospedagem em Hotel 4 estrelas
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                                Traslados de ida e volta entre o aeroporto e o hotel
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                                Passeio de balão ao amanhecer
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                                Entrada para o Museu a Céu Aberto de Göreme
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                                Jantar típico com danças tradicionais
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                                Guia turístico especializado em inglês
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                </svg>
+                                Seguro viagem
+                            </li>
+
+
+                            <!-- Adicione mais itens similares -->
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">Destaques</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                                Passeio de Balão com vista panorâmica da Capadócia
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                                Exploração das incríveis formações rochosas de Göreme
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                                Visita ao Vale das Fadas e suas incríveis chaminés de fada
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                                Passeio de camelo pelo deserto de Capadócia
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                                Conhecimento da história local em cidades subterrâneas
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                                Apreciação da culinária turca em restaurantes tradicionais
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                                Experiência cultural com música e dança folclórica turca
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold mb-6">Itinerário Detalhado</h3>
+                    <div class="space-y-8">
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h4 class="text-lg font-bold">Dia 1: Chegada</h4>
+                            <p class="text-gray-600 mt-2">Transfer do aeroporto para o hotel e check-in. Tarde livre para explorar as redondezas e jantar em restaurante local.</p>
+                        </div>
+
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h4 class="text-lg font-bold">Dia 2: Passeio de Balão</h4>
+                            <p class="text-gray-600 mt-2">Acorde cedo para um passeio de balão sobre as paisagens surreais da Capadócia. Após o voo, aproveite um café da manhã tradicional turco. Tarde livre para explorar o Museu a Céu Aberto de Göreme.</p>
+                        </div>
+
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h4 class="text-lg font-bold">Dia 3: Aventura e Cultura</h4>
+                            <p class="text-gray-600 mt-2">Explore as cidades subterrâneas de Derinkuyu ou Kaymakli. Visite o Vale das Fadas e aprecie suas formações rochosas. À noite, desfrute de um jantar típico com danças folclóricas.</p>
+                        </div>
+
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h4 class="text-lg font-bold">Dia 4: Passeio de Camelo</h4>
+                            <p class="text-gray-600 mt-2">Amanheça com um passeio de camelo pelas paisagens da Capadócia. Tarde livre para compras ou relaxar no hotel. À noite, aproveite o tempo para um jantar livre em um restaurante tradicional.</p>
+                        </div>
+
+                        <div class="border-l-4 border-blue-500 pl-6">
+                            <h4 class="text-lg font-bold">Dia 5: Partida</h4>
+                            <p class="text-gray-600 mt-2">Transfer para o aeroporto para o voo de volta, encerrando sua experiência inesquecível na Capadócia.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Reserva & Info -->
+            <div class="bg-white p-8 rounded-xl shadow-lg h-fit sticky top-8">
+                <h3 class="text-2xl font-bold mb-6">Solicitar Reserva</h3>
+                <form class="space-y-4">
+                    <!-- Datas -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Datas Pretendidas</label>
+                        <input type="date" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <!-- Viajantes -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Viajantes</label>
+                        <select class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                            <option>1 Adulto</option>
+                            <option>2 Adultos</option>
+                            <option>Família (2 Adultos + 1 Criança)</option>
+                            <option>Grupo (4+ Pessoas)</option>
+                        </select>
+                    </div>
+
+                    <!-- Forma de Pagamento -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Forma de Pagamento</label>
+                        <select class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
+                            <option>Cartão de Crédito</option>
+                            <option>PIX</option>
+                            <option>Boleto Bancário</option>
+                            <option>Transferência Bancária</option>
+                            <option>Parcelado em 12x</option>
+                        </select>
+                    </div>
+
+                    <!-- Solicitações Especiais -->
+                    <div>
+                        <label class="block text-gray-700 mb-2">Solicitações Especiais</label>
+                        <textarea class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Ex: Necessidades alimentares, acessibilidade, etc..."></textarea>
+                    </div>
+
+                    <!-- Termos e Condições -->
+                    <div class="flex items-start">
+                        <input type="checkbox" class="mt-1 mr-2 w-5 h-5 text-blue-600 border rounded focus:ring-blue-500" required>
+                        <label class="text-gray-600 text-sm">
+                            Concordo com os
+                            <a href="#" class="text-blue-600 hover:underline">Termos e Condições</a>
+                            e política de cancelamento
+                        </label>
+                    </div>
+
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Finalizar Reserva
+                    </button>
+                </form>
+
+                <div class="mt-8 pt-6 border-t">
+                    <h4 class="text-lg font-bold mb-4">Informações Importantes</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                            </div>
+                            Cancelamento até 30 dias antes
+                        </li>
+
+                        <!-- Formas de Pagamento -->
+                        <li class="flex items-center mt-4">
+                            <div class="w-5 h-5 text-blue-600 mr-2">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            Parcelamento em até 12x sem juros
+                        </li>
+
+
+                        <!-- Métodos de Pagamento -->
+                        <li class="mt-4">
+                            <p class="font-semibold mb-2">Métodos Aceitos:</p>
+                            <div class="grid grid-cols-4 gap-2">
+                                <div class="p-2 border rounded-lg flex justify-center">
+                                    <i class="fa-brands fa-cc-visa text-blue-600 text-2xl"></i>
+                                </div>
+                                <div class="p-2 border rounded-lg flex justify-center">
+                                    <i class="fab fa-cc-mastercard text-red-600 text-2xl"></i>
+                                </div>
+                                <div class="p-2 border rounded-lg flex justify-center">
+                                    <i class="fab fa-cc-paypal text-blue-500 text-2xl"></i>
+                                </div>
+                                <div class="p-2 border rounded-lg flex justify-center">
+                                    <i class="fab fa-apple-pay text-black text-2xl"></i>
+                                </div>
+                                <!-- Adicione mais ícones de métodos de pagamento -->
+                            </div>
+                        </li>
+
+
+                        <!-- Documentação Necessária -->
+                        <li class="flex items-center mt-4">
+                            <svg class="w-5 h-5 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Documentação necessária: RG e passaporte válido
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold mb-8 text-center">Nossa Galeria</h2>
+        <div class="max-w-2xl mx-auto">
+
+            <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="relative h-80 md:h-96" data-carousel-inner>
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://gdeuropa.b-cdn.net/wp-content/uploads/2016/12/Onde-ficar-na-CapadC3B3cia-1170x680.jpg" class="object-cover w-full h-full" alt="Slide 1">
+                        <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-xl font-semibold text-white md:text-2xl dark:text-gray-800"></span>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://www.abraceomundo.com/wp-content/uploads/2018/07/hoteis-de-caverna.gif" class="object-cover w-full h-full" alt="Slide 2">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://www.essemundoenosso.com.br/wp-content/uploads/2012/10/goreme7.jpg" class="object-cover w-full h-full" alt="Slide 3">
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="flex absolute bottom-5 left-1/2 z-30 -translate-x-1/2 space-x-2" data-carousel-indicators>
+                    <button type="button" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition"></button>
+
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition" data-carousel-prev>
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button type="button" class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition" data-carousel-next>
+                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+
+        </div>
+
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="bg-blue-50 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Quem Comprou Recomenda</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="fa fa-user w-12 h-12 rounded-full mr-4"></i>
+                        <div>
+                            <h4 class="font-bold">Ana Silva</h4>
+                            <p class="text-gray-600 text-sm">Maio 2024</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Experiência incrível! O resort superou todas as expectativas..."</p>
+                </div>
+                <!-- Adicione mais depoimentos -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2025 Explora Mais. Todos os direitos reservados.</p>
+            <p class="text-gray-400"><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
